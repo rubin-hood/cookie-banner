@@ -1,0 +1,82 @@
+/* ============== Dieser Abschnitt setzt grundlegende Browser-Standardeinstellungen zurück.
+  Damit beginnen wir mit einem „neutralen“ Ausgangspunkt für das Layout. ============== */
+* {
+    margin: 0;             /* Entfernt standardmäßige Außenabstände */
+    padding: 0;            /* Entfernt standardmäßige Innenabstände */
+    box-sizing: border-box;/* Legt fest, dass Breiten- & Höhenangaben auch Padding & Border einschließen */
+  }
+  
+  /* ============== Seitenlayout ============== */
+  body {
+    font-family: Arial, sans-serif; /* Schriftart für den gesamten Body */
+    line-height: 1.5;              /* Zeilenhöhe für bessere Lesbarkeit */
+    background-color: #f9f9f9;     /* Hellgrauer Hintergrund */
+    color: #333;                   /* Dunkler Text */
+  }
+  
+  header, main {
+    max-width: 1000px;  /* Begrenzung der Breite auf 1000px */
+    margin: 0 auto;     /* Zentriert das Element innerhalb des Body */
+    padding: 20px;      /* Innenabstand um den Inhalt */
+  }
+  
+  /* ============== Cookie-Banner-Styling ============== */
+  .cookie-banner {
+    position: fixed;                /* Fixiert das Element am Bildschirmrand */
+    bottom: 0;                      /* An der Unterkante des Bildschirms ausrichten */
+    left: 0;                        /* Ganz links positionieren */
+    width: 100%;                    /* Banner erstreckt sich über die gesamte Breite */
+    background-color: #fff;         /* Weißer Hintergrund */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Leichter Schlagschatten nach oben */
+    padding: 15px 20px;             /* Innenabstand für etwas „Luft“ um den Inhalt */
+    display: flex;                  /* Ermöglicht flexibles Layout */
+    justify-content: center;        /* Zentriert den Inhalt horizontal */
+    align-items: center;            /* Zentriert den Inhalt vertikal */
+    z-index: 999;                   /* Stapelreihenfolge: Banner liegt über allem */
+  }
+  
+  .cookie-banner__content {
+    max-width: 800px;   /* Beschränkt die Breite des Bannerntexts */
+    width: 100%;        /* Passt sich der verfügbaren Breite an */
+    text-align: center; /* Text zentrieren */
+  }
+  
+  .cookie-banner__content h2 {
+    margin-bottom: 10px; /* Abstand unter der Überschrift */
+    font-size: 1.2rem;   /* Schriftgröße für die Überschrift */
+  }
+  
+  .cookie-banner__content p {
+    margin-bottom: 15px; /* Abstand unter dem Absatz */
+    font-size: 1rem;     /* Schriftgröße für den Text */
+  }
+  
+  .cookie-banner__content a {
+    color: #007bff;       /* Link-Farbe (Blau) */
+    text-decoration: none;/* Entfernt die Unterstreichung */
+  }
+  
+  .cookie-banner__content a:hover {
+    text-decoration: underline; /* Unterstreicht Link beim Darüberfahren */
+  }
+  
+  .cookie-banner__content button {
+    padding: 10px 20px;          /* Innenabstand für den Button */
+    font-size: 1rem;             /* Schriftgröße im Button */
+    background-color: #007bff;   /* Blaue Button-Hintergrundfarbe */
+    color: #fff;                 /* Weißer Text im Button */
+    border: none;                /* Entfernt den Standardrahmen */
+    border-radius: 5px;          /* Runde Ecken */
+    cursor: pointer;             /* Zeigt den „Hand“-Cursor beim Hovern */
+  }
+  
+  .cookie-banner__content button:hover {
+    background-color: #0056b3; /* Etwas dunkleres Blau beim Hovern */
+  }
+  
+  /* ============== Banner ausgeblendet ============== */
+  .cookie-banner--hidden {
+    display: none; /* Blendet das Banner komplett aus */
+  }
+  
+  
